@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>CarBums Collectibles: Hot Wheels and diecast</title>
-<meta name="description" content="Hot Wheels and diecast collection flips, live auctions, and collector how-tos. Watch, sell your collection, or follow CarBums.">
+<meta name="description" content="Hot Wheels and diecast collection flips, live auctions, collector gifts, and how-tos. Watch, sell your collection, or follow CarBums.">
 <meta name="theme-color" content="#0d0d0f">
 <meta property="og:title" content="CarBums Collectibles">
 <meta property="og:description" content="Hot Wheels and diecast collection flips, live auctions, and collector how-tos.">
@@ -16,166 +16,63 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Barlow:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --asphalt: #0d0d0f;
-    --surface: #17171b;
-    --line: #2b2b33;
-    --red: #e5232e;
-    --red-press: #b81a24;
-    --text: #f4f4f5;
-    --muted: #a0a0ab;
-    --display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
-    --body: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    box-sizing: border-box;
-    padding-top: env(safe-area-inset-top, 0px);
-    padding-bottom: env(safe-area-inset-bottom, 0px);
-  }
-  *, *::before, *::after { box-sizing: inherit; }
-  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
-  body {
-    margin: 0;
-    background: var(--asphalt);
-    color: var(--text);
-    font-family: var(--body);
-    font-weight: 500;
-    line-height: 1.45;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .page { max-width: 460px; margin: 0 auto; padding: 40px 20px 48px; }
-
-  /* Header */
-  .logo { display: block; width: min(100%, 380px); height: auto; margin: 0 auto; }
-  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  .tag { margin: 10px auto 0; color: var(--muted); font-size: 17px; max-width: 34ch; text-align: center; }
-
-  /* The track: a dashed road line the whole list runs alongside */
-  .track {
-    position: relative;
-    margin: 36px 0 0;
-    padding-left: 22px;
-  }
-  .track::before {
-    content: "";
-    position: absolute;
-    left: 5px; top: 6px; bottom: 6px;
-    width: 0;
-    border-left: 3px dashed var(--red);
-    opacity: .85;
-  }
-
-  .group { margin: 0 0 30px; }
-  .group:last-child { margin-bottom: 0; }
-  .group h2 {
-    font-family: var(--display);
-    font-style: italic;
-    font-weight: 800;
-    font-size: 26px;
-    line-height: 1;
-    margin: 0 0 12px;
-  }
-
-  .btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 64px;
-    padding: 12px 18px;
-    margin: 0 0 10px;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 18px;
-    transition: border-color .15s ease, background-color .15s ease, transform .1s ease;
-  }
-  .btn small { color: var(--muted); font-weight: 500; font-size: 14px; margin-top: 2px; }
-  .btn:hover { border-color: var(--red); }
-  .btn:active { transform: scale(.985); }
-  .btn.primary { background: var(--red); border-color: var(--red); }
-  .btn.primary small { color: #ffe3e5; }
-  .btn.primary:hover { background: var(--red-press); border-color: var(--red-press); }
-
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .grid .btn { margin: 0; min-height: 56px; align-items: flex-start; }
-
-  a:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
-
-  footer { margin-top: 44px; color: var(--muted); font-size: 15px; }
-  footer a { color: var(--text); }
-  footer p { margin: 0 0 6px; }
-
-  @media (prefers-reduced-motion: reduce) {
-    .btn { transition: none; }
-  }
+:root { --asphalt:#0d0d0f; --surface:#17171b; --line:#2b2b33; --red:#e5232e; --red-press:#b81a24; --text:#f4f4f5; --muted:#a0a0ab; --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif; --body:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); }
+*,*::before,*::after {box-sizing:inherit}
+html {scroll-padding-top:env(safe-area-inset-top,0px)}
+body {margin:0;background:var(--asphalt);color:var(--text);font-family:var(--body);font-weight:500;line-height:1.45;-webkit-font-smoothing:antialiased}
+.page {max-width:460px;margin:0 auto;padding:40px 20px 48px}
+.logo {display:block;width:min(100%,380px);height:auto;margin:0 auto}
+.sr {position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tag {margin:10px auto 0;color:var(--muted);font-size:17px;max-width:34ch;text-align:center}
+.track {position:relative;margin:36px 0 0;padding-left:22px}
+.track::before {content:"";position:absolute;left:5px;top:6px;bottom:6px;width:0;border-left:3px dashed var(--red);opacity:.85}
+.group {margin:0 0 30px}.group:last-child {margin-bottom:0}
+.group h2 {font-family:var(--display);font-style:italic;font-weight:800;font-size:26px;line-height:1;margin:0 0 12px}
+.btn {display:flex;flex-direction:column;justify-content:center;min-height:64px;padding:12px 18px;margin:0 0 10px;background:var(--surface);border:1px solid var(--line);border-radius:10px;color:var(--text);text-decoration:none;font-weight:600;font-size:18px;transition:border-color .15s ease,background-color .15s ease,transform .1s ease}
+.btn small {color:var(--muted);font-weight:500;font-size:14px;margin-top:2px}
+.btn:hover {border-color:var(--red)}.btn:active {transform:scale(.985)}
+.btn.primary {background:var(--red);border-color:var(--red)}.btn.primary small {color:#ffe3e5}.btn.primary:hover {background:var(--red-press);border-color:var(--red-press)}
+.grid {display:grid;grid-template-columns:1fr 1fr;gap:10px}.grid .btn {margin:0;min-height:56px;align-items:flex-start}
+a:focus-visible {outline:3px solid #fff;outline-offset:3px}
+.affiliate-note {font-size:13px;color:var(--muted);margin:4px 0 0;line-height:1.5}
+footer {margin-top:44px;color:var(--muted);font-size:15px}footer a {color:var(--text)}footer p {margin:0 0 6px}
+@media (prefers-reduced-motion:reduce) {.btn {transition:none}}
 </style>
 </head>
 <body>
 <main class="page">
-
-  <header>
-    <h1 class="sr">CarBums Collectibles</h1>
-    <picture>
-      <source srcset="/logo.webp" type="image/webp">
-      <img class="logo" src="/logo.png" alt="CarBums logo: a bearded collector holding a red and a blue sports car in front of flames" width="600" height="503">
-    </picture>
-    <p class="tag">Hot Wheels and diecast. Collection flips, live auctions, and collector how-tos.</p>
-  </header>
-
-  <div class="track">
-
-    <section class="group" aria-labelledby="live">
-      <h2 id="live">Buy and bid</h2>
-      <a class="btn primary" href="https://www.tiktok.com/@carbums" target="_blank" rel="noopener">
-        Watch live auctions on TikTok
-        <small>Go live on TikTok and bid on mystery cars</small>
-      </a>
-    </section>
-
-    <!-- GEAR / VALUE SECTION: add when /gear and /value pages exist.
-    <section class="group" aria-labelledby="collect">
-      <h2 id="collect">Collect</h2>
-      <a class="btn" href="/gear/">Gear I use and recommend<small>Displays, storage, customizing tools</small></a>
-      <a class="btn" href="/value/">What is your collection worth?<small>Apps and tips for valuing Hot Wheels</small></a>
-    </section>
-    -->
-
-    <section class="group" aria-labelledby="sell">
-      <h2 id="sell">Sell your collection</h2>
-      <a class="btn" href="mailto:carbumscollectibles@gmail.com?subject=Collection%20for%20sale&amp;body=Name%3A%0ALocation%3A%0AApproximate%20number%20of%20cars%3A%0ATypes%20(Hot%20Wheels%2C%20Matchbox%2C%20premium%2C%20etc.)%3A%0AAsking%20price%3A%0A%0A(Please%20attach%20a%20few%20photos.)">
-        Email me about your collection
-        <small>Send a few photos and what you have</small>
-      </a>
-    </section>
-
-    <section class="group" aria-labelledby="follow">
-      <h2 id="follow">Watch and follow</h2>
-      <div class="grid">
-        <a class="btn" href="https://www.youtube.com/@CarbumsCollectibles" target="_blank" rel="noopener">YouTube</a>
-        <a class="btn" href="https://www.tiktok.com/@carbums" target="_blank" rel="noopener">TikTok</a>
-        <a class="btn" href="https://www.instagram.com/carbumscollectibles/" target="_blank" rel="noopener">Instagram</a>
-        <a class="btn" href="https://www.facebook.com/p/Carbums-Collectibles-61591104881589/" target="_blank" rel="noopener">Facebook</a>
-      </div>
-    </section>
-
-    <section class="group" aria-labelledby="biz">
-      <h2 id="biz">Brands and sponsors</h2>
-      <a class="btn" href="mailto:carbumscollectibles@gmail.com?subject=Partnership%20inquiry">
-        Partnership and sponsorship inquiries
-        <small>carbumscollectibles@gmail.com</small>
-      </a>
-    </section>
-
-  </div>
-
-  <footer>
-    <p>Boise, Idaho</p>
-    <p>&copy; 2026 CarBums Collectibles</p>
-    <!-- Add once affiliate links go live: "Some links on this site are affiliate links. I may earn a commission at no extra cost to you. As an Amazon Associate I earn from qualifying purchases." -->
-  </footer>
-
+<header>
+<h1 class="sr">CarBums Collectibles</h1>
+<picture><source srcset="/logo.webp" type="image/webp"><img class="logo" src="/logo.png" alt="CarBums logo: a bearded collector holding a red and a blue sports car in front of flames" width="600" height="503"></picture>
+<p class="tag">Hot Wheels and diecast. Collection flips, live auctions, and collector how-tos.</p>
+</header>
+<div class="track">
+<section class="group" aria-labelledby="live"><h2 id="live">Buy and bid</h2>
+<a class="btn primary" href="https://www.tiktok.com/@carbums" target="_blank" rel="noopener noreferrer">Watch live auctions on TikTok<small>Go live on TikTok and bid on mystery cars</small></a>
+</section>
+<section class="group" aria-labelledby="gifts"><h2 id="gifts">Gifts for diecast collectors</h2>
+<a class="btn primary" href="/gear/">The CarBums gift guide<small>Gift ideas, displays, premium models and RC gear</small></a>
+<a class="btn" href="https://164model.com/?ref=CarBums" target="_blank" rel="sponsored noopener noreferrer">Shop 164 Model<small>Explore diecast models and collector favorites</small></a>
+<a class="btn" href="https://captainrc.com?sca_ref=12742982.O0Y0EmX87r" target="_blank" rel="sponsored noopener noreferrer">Shop CaptainRC<small>Explore RC gifts and hobby gear</small></a>
+<!-- Replace # with your actual Amazon affiliate storefront or Idea List URL before publishing this button. -->
+<!-- <a class="btn" href="YOUR_AMAZON_AFFILIATE_URL" target="_blank" rel="sponsored noopener noreferrer">My Amazon gift picks<small>Displays, storage, and customizing supplies</small></a> -->
+<p class="affiliate-note">Some links are affiliate links. I may earn a commission at no extra cost to you. As an Amazon Associate I earn from qualifying purchases.</p>
+</section>
+<!-- Add gear and value links when those pages exist. -->
+<section class="group" aria-labelledby="sell"><h2 id="sell">Sell your collection</h2>
+<a class="btn" href="mailto:carbumscollectibles@gmail.com?subject=Collection%20for%20sale&amp;body=Name%3A%0ALocation%3A%0AApproximate%20number%20of%20cars%3A%0ATypes%20(Hot%20Wheels%2C%20Matchbox%2C%20premium%2C%20etc.)%3A%0AAsking%20price%3A%0A%0A(Please%20attach%20a%20few%20photos.)">Email me about your collection<small>Send a few photos and what you have</small></a>
+</section>
+<section class="group" aria-labelledby="follow"><h2 id="follow">Watch and follow</h2><div class="grid">
+<a class="btn" href="https://www.youtube.com/@CarbumsCollectibles" target="_blank" rel="noopener noreferrer">YouTube</a>
+<a class="btn" href="https://www.tiktok.com/@carbums" target="_blank" rel="noopener noreferrer">TikTok</a>
+<a class="btn" href="https://www.instagram.com/carbumscollectibles/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a class="btn" href="https://www.facebook.com/p/Carbums-Collectibles-61591104881589/" target="_blank" rel="noopener noreferrer">Facebook</a>
+</div></section>
+<section class="group" aria-labelledby="biz"><h2 id="biz">Brands and sponsors</h2>
+<a class="btn" href="mailto:carbumscollectibles@gmail.com?subject=Partnership%20inquiry">Partnership and sponsorship inquiries<small>carbumscollectibles@gmail.com</small></a>
+</section>
+</div>
+<footer><p>Boise, Idaho</p><p>&copy; 2026 CarBums Collectibles</p></footer>
 </main>
 </body>
 </html>
